@@ -106,7 +106,15 @@ def find_duplicates(tuple_in: Tuple) -> List:
     :param tuple_in: A tuple
     :return: a A list containing duplicate items in the tuple_in parameter
     """
-    pass  # implement me
+
+    li = []
+    i = 0
+    for x in tuple_in:
+        if x[i] == x:
+            li.append(str(x[i]))
+            i += 1
+            print(li)
+
 
 
 find_lowest_value([512, -256, -128, 0, 128])
@@ -115,3 +123,4 @@ find_value(128, [512, -256, -128, 0, 128])
 compare_two_numbers(-1, -4)
 compare_two_strings('ed', 'ed')
 find_common((1, 2, 3, 4), (2, 3, 4, 9))
+find_duplicates((1, 2, 3, 3, 4))
