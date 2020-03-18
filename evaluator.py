@@ -108,12 +108,11 @@ def find_duplicates(tuple_in: Tuple) -> List:
     """
 
     li = []
-    i = 0
     for x in tuple_in:
-        if x[i] == x:
-            li.append(str(x[i]))
-            i += 1
-            print(li)
+        if tuple_in.count(x) > 1:
+            li.append(x)
+            li_set = set(li)
+    return li_set
 
 
 
