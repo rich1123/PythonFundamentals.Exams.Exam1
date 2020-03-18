@@ -1,3 +1,5 @@
+import typing
+
 def meters_to_feet(meters: float) -> float:
     """
     This function takes a float representing a measurement in meters
@@ -7,7 +9,9 @@ def meters_to_feet(meters: float) -> float:
     :param meters: A float representing a measurement in meters.
     :return: A float representing the input measurement converted to feet.
     """
-    pass  # implement me
+    feet = float(meters * 3.28084)
+    return round(feet, 2)
+
 
 
 def feet_to_meters(feet: float) -> float:
@@ -19,7 +23,8 @@ def feet_to_meters(feet: float) -> float:
     :param feet: A float representing a measurement in feet.
     :return: A float representing the input measurement converted to meters.
     """
-    pass  # implement me
+    meters = float(feet / 0.3048000097536)
+    return round(meters, 2)
 
 
 def kilometer_to_miles(kilometers: float) -> float:
@@ -46,3 +51,5 @@ def miles_to_kilometers(miles: float) -> float:
     pass  # implement me
 
 
+meters_to_feet(2.0)
+feet_to_meters(2.0)
