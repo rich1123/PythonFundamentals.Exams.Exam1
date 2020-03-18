@@ -58,11 +58,11 @@ def compare_two_numbers(a: N, b: N) -> int:
     :return: an integer 0, 1, or -1
     """
     if a == b:
-        print(0)
+        return 0
     elif a > b:
-        print(1)
+        return 1
     else:
-        print(-1)
+        return -1
 
 
 def compare_two_strings(a: str, b: str) -> int:
@@ -77,7 +77,13 @@ def compare_two_strings(a: str, b: str) -> int:
     :param b: The second string.
     :return: an integer 0, 1, or -1
     """
-    pass  # implement me
+
+    if len(a) == len(b):
+        return 0
+    elif len(a) > len(b):
+        return 1
+    else:
+        return -1
 
 
 def find_common(tuple_a: Tuple, tuple_b: Tuple) -> Set:
@@ -105,3 +111,4 @@ find_lowest_value([512, -256, -128, 0, 128])
 find_highest_value([512, -256, -128, 0, 128])
 find_value(128, [512, -256, -128, 0, 128])
 compare_two_numbers(-1, -4)
+compare_two_strings('ed', 'ed')
