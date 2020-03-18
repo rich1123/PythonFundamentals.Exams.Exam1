@@ -94,7 +94,9 @@ def find_common(tuple_a: Tuple, tuple_b: Tuple) -> Set:
     :param tuple_b: The second tuple.
     :return: A set containing items common on both tuples.
     """
-    pass  # implement me
+    result = (set(tuple_a).intersection(set(tuple_b)))
+    return result
+
 
 
 def find_duplicates(tuple_in: Tuple) -> List:
@@ -112,3 +114,4 @@ find_highest_value([512, -256, -128, 0, 128])
 find_value(128, [512, -256, -128, 0, 128])
 compare_two_numbers(-1, -4)
 compare_two_strings('ed', 'ed')
+find_common((1, 2, 3, 4), (2, 3, 4, 9))
